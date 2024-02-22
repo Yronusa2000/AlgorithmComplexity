@@ -3,15 +3,26 @@ package org.example;
 import java.math.BigInteger;
 import java.util.function.Function;
 
-public class Fibonnaci implements Algorithm<Integer,BigInteger> {
+public class Fibonnaci implements Benchmark<Integer,BigInteger> {
 
 
     Function<Integer, BigInteger> algorithm;
 
 
     @Override
-    public Integer getEntry(Integer n) {
-        return n;
+    public Generator<Integer> getGenerator() {
+        return new Generator<Integer>() {
+            @Override
+            public Integer apply(Integer n) {
+                return n;
+            }
+
+            @Override
+            public String getName() {
+                return "Basic";
+            }
+        };
+
     }
 
     @Override

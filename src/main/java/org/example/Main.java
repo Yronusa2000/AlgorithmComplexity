@@ -14,9 +14,11 @@ public class Main {
         System.out.println("Hello world!");
 
 
-        Tri.insertion.evaluate(10);
-
-        Tri.bulles.graphData(1000, 1100);
+        new Tri(Tri.twoValues, Tri.insertionSort).graphData(50, 2000);
+        new Tri(Tri.sortedUp, Tri.insertionSort).graphData(50,2000);
+        new Tri(Tri.randomSorted, Tri.insertionSort).graphData(50, 2000);
+        new Tri(Tri.sortedDown, Tri.insertionSort).graphData(50, 2000);
+        new Tri(Tri.sameValue, Tri.insertionSort).graphData(50, 2000);
 
 
     }
